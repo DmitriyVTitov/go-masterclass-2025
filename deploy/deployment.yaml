@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ugc-deployment
+spec:
+  selector:
+    matchLabels:
+      appname: ugc
+  replicas: 2 # количество экземпляров приложения
+  template:
+    metadata:
+      labels:
+        appname: ugc
+    spec:
+      containers:
+      - name: ugc
+        image: dmitriytitov/ugc:latest
+        ports:
+        - containerPort: 8080
+
+# kubectl port-forward deployment.apps/ugc-deployment 8080:8080 
