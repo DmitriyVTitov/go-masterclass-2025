@@ -69,8 +69,8 @@ func newTraceProvider(ctx context.Context, endpoint string) (*trace.TracerProvid
 
 	traceRes := resource.NewWithAttributes(
 		semconv.SchemaURL,
-		semconv.ServiceNamespace("wb-maps"),
-		semconv.ServiceName("wb-maps-template-app"),
+		semconv.ServiceNamespace("go-masterclass"),
+		semconv.ServiceName("ugc-app"),
 	)
 
 	traceProvider := trace.NewTracerProvider(

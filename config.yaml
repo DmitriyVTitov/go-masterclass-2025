@@ -1,6 +1,6 @@
 # Config file example
 log_level: 1
-telemetry_endpoint: localhost:4318
+telemetry_endpoint: http://localhost:4318
 
 app_base_url: http://localhost:8080
 app_base_path: /
